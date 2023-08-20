@@ -1,10 +1,11 @@
 local lsp = require('lsp-zero').preset({'recommended'})
 
 lsp.ensure_installed({
-    'jedi-language-server', -- python
+    -- Use :h lspconfig-all to get list of available LSPs
+    'jedi_language_server', -- python
     'eslint', -- js, ts lint
     'tsserver', -- js, ts
-    'sumneko_lua',
+    'lua_ls',
     'rust_analyzer',
 })
 

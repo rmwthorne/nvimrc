@@ -9,6 +9,9 @@ return require('packer').startup(function(use)
   -- Themes
   use { 'rose-pine/neovim', as = 'rose-pine', config = function() vim.cmd('colorscheme rose-pine') end }
 
+  -- UI
+  use "lukas-reineke/indent-blankline.nvim"
+
   -- Navigation
   use { 'nvim-telescope/telescope.nvim', tag = '0.1.2', requires = {'nvim-lua/plenary.nvim'}}
   use {'theprimeagen/harpoon'}

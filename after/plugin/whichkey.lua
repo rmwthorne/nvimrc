@@ -55,8 +55,13 @@ local leader_keymaps = {
         l = {cmd('lua require("harpoon.ui").nav_file(3)'), 'goto 3'},
         [';'] = {cmd('lua require("harpoon.ui").nav_file(4)'), 'goto 4'},
     },
-    u = {cmd('UndotreeToggle'), 'undotree'},
-    x = {cmd('TroubleToggle'), 'diagnostics'},
+    t = {
+        name = '+ toggle',
+        i = {cmd('IndentBlanklineToggle'), 'indent markers'},
+        w = {cmd('set list!'), 'whitespace chars'},
+        u = {cmd('UndotreeToggle'), 'undotree'},
+        x = {cmd('TroubleToggle'), 'diagnostics'},
+    },
     w = {
         name = '+ window',
         h = {cmd('wincmd h'), 'left'},
