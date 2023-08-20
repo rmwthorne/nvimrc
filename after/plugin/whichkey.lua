@@ -4,7 +4,7 @@ local cmd = function(command)
   return '<Cmd>'..command..'<CR>'
 end;
 
-local keymaps = {
+local leader_keymaps = {
     b = {
         name = '+ buffers',
         n = {cmd('bnext'), 'next'},
@@ -65,5 +65,5 @@ local keymaps = {
     },
 }
 
-require('whichkey_setup').register_keymap('leader', keymaps)
+require('whichkey_setup').register_keymap('leader', leader_keymaps)
 
