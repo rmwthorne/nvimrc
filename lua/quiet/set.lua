@@ -11,7 +11,6 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
--- Whitespace
-vim.opt.list = true
+-- Whitespace characters
 vim.opt.listchars:append "space:⋅"
--- vim.opt.listchars:append "eol:↴"
+ vim.opt.listchars:append "eol:↴"

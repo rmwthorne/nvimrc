@@ -57,7 +57,7 @@ local leader_keymaps = {
     },
     t = {
         name = '+ toggle',
-        i = {cmd('IndentBlanklineToggle'), 'indent markers'},
+        i = {cmd('IndentBlanklineToggle'), 'indent guides'},
         w = {cmd('set list!'), 'whitespace chars'},
         u = {cmd('UndotreeToggle'), 'undotree'},
         x = {cmd('TroubleToggle'), 'diagnostics'},
