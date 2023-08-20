@@ -56,6 +56,7 @@ local leader_keymaps = {
         [';'] = {cmd('lua require("harpoon.ui").nav_file(4)'), 'goto 4'},
     },
     u = {cmd('UndotreeToggle'), 'undotree'},
+    x = {cmd('TroubleToggle'), 'diagnostics'},
     w = {
         name = '+ window',
         h = {cmd('wincmd h'), 'left'},
