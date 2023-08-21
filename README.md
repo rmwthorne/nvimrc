@@ -13,5 +13,5 @@
 
 ## Notes
 
-Leader remaps are defined in [whichkey.lua](after/plugin/whichkey.lua) or [remap.lua](lua/quiet/remap.lua), otherwise in their respective `after/plugin` files.
+Leader remaps are defined in [whichkey.lua](after/plugin/whichkey.lua) or [remap.lua](lua/custom/remap.lua), otherwise in their respective `after/plugin` files.
 
