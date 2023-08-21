@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 local cmd = function(command)
-  return '<Cmd>'..command..'<CR>'
+    return '<Cmd>'..command..'<CR>'
 end;
 
 local leader_keymaps = {
@@ -14,23 +14,17 @@ local leader_keymaps = {
     e = {cmd('Ex'), 'filetree'},
     f = {
         name = '+ find',
-        -- q = {'Telescope quickfix', 'quickfix'},
-	f = {cmd('Telescope git_files'), 'find files'},
+        f = {cmd('Telescope git_files'), 'find files'},
         a = {cmd('Telescope find_files'), 'find all files'},
         o = {cmd('Telescope oldfiles'), 'recent files'},
         g = {cmd('Telescope live_grep'), 'live grep'},
         t = {cmd('Telescope treesitter'), 'tags'},
         w = {
-	    cmd('lua require("telescope.builtin").grep_string { search = vim.fn.expand("<cword>") }'),
+            cmd('lua require("telescope.builtin").grep_string { search = vim.fn.expand("<cword>") }'),
             'grep word under cursor'
-	},
-        -- s = {cmd('Telescope spell_suggest'), 'spellcheck'},
-        -- d = {
-	--     cmd(':lua require("telescope.builtin").find_files { cwd = "~/.config/nvim/", prompt_title = "Search vimrc files", }'),
-        --     'dotfiles/vimrc'
-	-- },
+        },
     },
---[[
+    --[[
     g = {
         name = '+ git',
         s = {cmd('Git'), 'status'},
@@ -45,7 +39,7 @@ local leader_keymaps = {
         j = 'jump references',
         i = 'goto implementation',
     },
-]] --
+    ]] --
     h = {
         name = '+ harpoon',
         m = {cmd('lua require("harpoon.mark").add_file()'), 'mark'},
