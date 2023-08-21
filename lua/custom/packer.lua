@@ -21,11 +21,17 @@ return require('packer').startup(function(use)
 
     -- Navigation
     use {'nvim-telescope/telescope.nvim', tag = '0.1.2', requires = {'nvim-lua/plenary.nvim'}}
-    use {'theprimeagen/harpoon'}
-    use {'mbbill/undotree'}
+    use 'theprimeagen/harpoon'
+    use 'mbbill/undotree'
+
+    -- Functional
+    use 'tpope/vim-surround'
+    use 'tpope/vim-commentary'
+    use 'tpope/vim-fugitive'
+    use 'lewis6991/gitsigns.nvim'
 
     -- LSP and syntax
-    use {'nvim-treesitter/nvim-treesitter'}
+    use 'nvim-treesitter/nvim-treesitter'
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',

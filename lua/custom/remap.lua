@@ -7,3 +7,6 @@ vim.keymap.set('i', 'JK', '<Esc>')
 vim.keymap.set('n', '<Tab>', '<Cmd>bnext<CR>')
 vim.keymap.set('n', '<S-Tab>', '<Cmd>bprevious<CR>')
 
+-- Don't need this
+vim.keymap.set('n', 'q', '<silent>')
+vim.keymap.set('n', 'Q', '<silent>')
