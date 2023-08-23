@@ -1,10 +1,14 @@
 vim.opt.termguicolors = true
+vim.opt.updatetime = 50
 
--- Line numbers
-vim.opt.nu = true
+-- Line settings
+vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.wrap = false
+vim.opt.scrolloff = 8
+vim.opt.cursorline = true
 
--- Overriding vim's tab shenanigans
+-- Sensible tab behaviour
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -13,4 +17,6 @@ vim.opt.smartindent = true
 
 -- Whitespace characters
 vim.opt.listchars:append "space:⋅"
- vim.opt.listchars:append "eol:↴"
+vim.opt.listchars:append "eol:↴"
+
+vim.opt.incsearch = true
