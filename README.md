@@ -11,7 +11,10 @@
 1. Symlink `~/.conf/nvim` to this dir
 1. Run `:PackerSync` to install the plugins
 
-## Notes
+## Remaps
 
-Leader remaps are defined in [whichkey.lua](after/plugin/whichkey.lua) or [remap.lua](lua/custom/remap.lua), otherwise in their respective `after/plugin` files.
+Remaps are defined in three main places: 
+- [`remap.lua`](lua/custom/remap.lua) contains nonleader remaps (typically navigation)
+- [`whichkey.lua`](after/plugin/whichkey.lua) contains documented leader remaps
+- Plugin-specific remaps are in their respective `after/plugin` files
 
