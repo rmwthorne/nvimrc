@@ -7,10 +7,6 @@ vim.keymap.set('i', 'JK', '<Esc>')
 vim.keymap.set('n', '<Tab>', '<Cmd>bnext<CR>')
 vim.keymap.set('n', '<S-Tab>', '<Cmd>bprevious<CR>')
 
--- Don't need this
-vim.keymap.set('n', 'q', '<silent>')
-vim.keymap.set('n', 'Q', '<silent>')
-
 -- Keep cursor stationary when merging lines
 vim.keymap.set("n", "J", "mzJ`z")
 
@@ -22,3 +18,11 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('n', '<Esc>', '<Cmd>:noh<CR>')
+
+
+-- Commands
+
+local cmd = function(command)
+    return '<Cmd>'..command..'<CR>'
+end;
+

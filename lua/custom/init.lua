@@ -1,3 +1,3 @@
-require("custom.remap")
-require("custom.set")
+require("custom.remaps")
+require("custom.opts")
 
