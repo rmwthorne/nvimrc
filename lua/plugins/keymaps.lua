@@ -13,9 +13,9 @@ return {
             return require('which-key.extras').expand.buf()
         end
         },
-        {'<leader>t', group = 'toggle'},
-        {'<leader>tw', cmd('set list!'), desc = 'whitespace', icon = ''},
-        {'<leader>tu', cmd('UndotreeToggle'), desc = 'whitespace' icon = '󰇘'},
+        {'<leader>t', group = 'toggle', icon = ''},
+        {'<leader>tw', cmd('set list!'), desc = 'whitespace', icon = '󰇘'},
+        {'<leader>tu', cmd('UndotreeToggle'), desc = 'undotree', icon = '󰕌'},
       },
     },
     keys = {
