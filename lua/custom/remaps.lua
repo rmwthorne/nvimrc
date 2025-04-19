@@ -19,10 +19,3 @@ vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('n', '<Esc>', '<Cmd>:noh<CR>')
 
-
--- Commands
-
-local cmd = function(command)
-    return '<Cmd>'..command..'<CR>'
-end;
-
