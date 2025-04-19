@@ -13,6 +13,7 @@ return {
             return require('which-key.extras').expand.buf()
         end
         },
+        {'<leader>bd', cmd(':bdelete'), desc = 'delete current', icon = 'X'},
         {'<leader>t', group = 'toggle', icon = ''},
         {'<leader>tw', cmd('set list!'), desc = 'whitespace', icon = '󰇘'},
         {'<leader>tu', cmd('UndotreeToggle'), desc = 'undotree', icon = '󰕌'},
