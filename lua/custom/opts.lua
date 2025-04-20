@@ -19,4 +19,14 @@ vim.opt.smartindent = true
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
 
+-- Visual indicators
 vim.opt.incsearch = true
+vim.api.nvim_create_autocmd(
+    'TextYankPost',
+    {
+        pattern = '*',
+        callback = function ()
+            vim.highlight.on_yank()
+        end
+    }
+)

@@ -1,3 +1,8 @@
+local reserve_gutter = function ()
+    vim.opt.signcolumn = 'yes'
+end
+
+
 return {
   {
     'williamboman/mason.nvim',
@@ -17,11 +22,7 @@ return {
       {'williamboman/mason.nvim'},
       {'williamboman/mason-lspconfig.nvim'},
     },
-    init = function()
-      -- Reserve a space in the gutter
-      -- This will avoid an annoying layout shift in the screen
-      vim.opt.signcolumn = 'yes'
-    end,
+    init = reserve_gutter,
     config = function()
       local lsp_defaults = require('lspconfig').util.default_config
 
