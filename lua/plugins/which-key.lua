@@ -1,4 +1,4 @@
-local cmd = require('custom/utils').vim_command
+local as_cmd = require('custom.utils').as_cmd
 
 return {
   {
@@ -13,10 +13,10 @@ return {
             return require('which-key.extras').expand.buf()
         end
         },
-        {'<leader>bd', cmd(':bdelete'), desc = 'delete current', icon = 'X'},
+        {'<leader>bd', as_cmd(':bdelete'), desc = 'delete current', icon = 'X'},
         {'<leader>t', group = 'toggle', icon = ''},
-        {'<leader>tw', cmd('set list!'), desc = 'whitespace', icon = '󰇘'},
-        {'<leader>tu', cmd('UndotreeToggle'), desc = 'undotree', icon = '󰕌'},
+        {'<leader>tw', as_cmd('set list!'), desc = 'whitespace', icon = '󰇘'},
+        {'<leader>tu', as_cmd('UndotreeToggle'), desc = 'undotree', icon = '󰕌'},
       },
     },
     keys = {

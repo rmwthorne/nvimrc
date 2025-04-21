@@ -54,11 +54,19 @@ return {
         end,
       })
 
+      -- diagnostics signs
+      local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
+      for type, icon in pairs(signs) do
+        local hl = "DiagnosticSign" .. type
+        vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+      end
+
       require('mason-lspconfig').setup({
         ensure_installed = {
             'jedi_language_server', -- python
             'lua_ls',
         },
+        automatic_installation = true,
         handlers = {
           -- this first function is the "default handler"
           -- it applies to every language server without a "custom handler"

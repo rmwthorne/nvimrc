@@ -1,6 +1,6 @@
 local M = {}
 
-M.vim_command = function(command)
+M.as_cmd = function(command)
   return '<Cmd>'..command..'<CR>'
 end;
 
