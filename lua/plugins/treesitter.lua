@@ -47,6 +47,8 @@ return {
                     keymaps = {
                         ['af'] = { query = '@function.outer', desc = 'function block'},
                         ['if'] = { query = '@function.inner', desc = 'function block'},
+                        ['ac'] = { query = '@class.outer', desc = 'class block'},
+                        ['ic'] = { query = '@class.inner', desc = 'class block'},
                         ['ar'] = { query = '@parameter.outer', desc = 'arg/param'},
                         ['ir'] = { query = '@parameter.inner', desc = 'arg/param'},
                     },
