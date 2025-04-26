@@ -15,6 +15,7 @@ return {
         },
         {'<leader>bd', as_cmd(':bdelete'), desc = 'delete current', icon = 'X'},
         {'<leader>t', group = 'toggle', icon = ''},
+        {'<leader>d', group = 'debug', icon = ''},
         {'<leader>tw', as_cmd('set list!'), desc = 'whitespace', icon = '󰇘'},
         {'<leader>tu', as_cmd('UndotreeToggle'), desc = 'undotree', icon = '󰕌'},
       },
