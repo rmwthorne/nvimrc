@@ -23,18 +23,7 @@ return {
     },
     init = reserve_gutter,
     config = function()
-      local lsp_defaults = require('lspconfig').util.default_config
-
-      -- Add cmp_nvim_lsp capabilities settings to lspconfig
-      -- This should be executed before you configure any language server
-      lsp_defaults.capabilities = vim.tbl_deep_extend(
-        'force',
-        lsp_defaults.capabilities,
-        require('cmp_nvim_lsp').default_capabilities()
-      )
-
-      -- LspAttach is where you enable features that only work
-      -- if there is a language server active in the file
+      -- Define LspAttach
       vim.api.nvim_create_autocmd('LspAttach', {
         desc = 'LSP actions',
         callback = function(event)
@@ -53,27 +42,47 @@ return {
         end,
       })
 
-      -- diagnostics signs
-      local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
-      for type, icon in pairs(signs) do
-        local hl = "DiagnosticSign" .. type
-        vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-      end
+      -- Set LSP capabilities
+      local lsp_defaults = require('lspconfig').util.default_config
+      lsp_defaults.capabilities = vim.tbl_deep_extend(
+        'force',
+        lsp_defaults.capabilities,
+        require('cmp_nvim_lsp').default_capabilities()
+      )
 
+      -- Setup servers
       require('mason-lspconfig').setup({
         ensure_installed = {
-            'jedi_language_server', -- python
-            'lua_ls',
+            'basedpyright', -- python
+            'ts_ls', -- js, ts
+            'lua_ls', -- lua
+            'rust_analyzer', -- rust
         },
         automatic_installation = true,
         handlers = {
-          -- this first function is the "default handler"
-          -- it applies to every language server without a "custom handler"
+          -- Default handler
           function(server_name)
             require('lspconfig')[server_name].setup({})
           end,
         }
       })
+
+      -- Diagnostics
+      vim.diagnostic.config({
+        virtual_text = true,
+        update_in_insert = false,
+        underline = false,
+        severity_sort = true,
+        signs = {
+          text = {
+            [vim.diagnostic.severity.ERROR] = '󰅚 ',
+            [vim.diagnostic.severity.WARN] = '󰀪 ',
+            [vim.diagnostic.severity.HINT] = '󰌶 ',
+            [vim.diagnostic.severity.INFO] = '󰅚 ',
+          },
+        },
+      })
+
     end
   }
 }
