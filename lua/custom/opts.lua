@@ -1,17 +1,16 @@
 vim.opt.termguicolors = true
 vim.opt.updatetime = 50
 
--- Line settings
+-- Line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.wrap = false
 vim.opt.scrolloff = 8
 vim.opt.cursorline = true
 
--- Sensible tab behaviour
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
+-- Indentation
+local set_indent = require('custom.utils').set_indent
+set_indent({'lua', 'javascript', 'typescript'}, 2)
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
@@ -19,7 +18,7 @@ vim.opt.smartindent = true
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
 
--- Visual indicators
+-- Visual feedback
 vim.opt.incsearch = true
 vim.api.nvim_create_autocmd(
     'TextYankPost',
