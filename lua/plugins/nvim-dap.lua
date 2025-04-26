@@ -1,6 +1,7 @@
 return {
   {
     "mfussenegger/nvim-dap",
+    ft = { 'python' },
     dependencies = {
       "nvim-neotest/nvim-nio",
       "rcarriga/nvim-dap-ui",
@@ -10,7 +11,6 @@ return {
     config = function()
       local dap = require("dap")
       local dapui = require("dapui")
-      local dap_python = require("dap-python")
 
       require("dapui").setup({})
       require("nvim-dap-virtual-text").setup({
@@ -19,7 +19,7 @@ return {
         commented = true, -- Show virtual text alongside comment
       })
 
-      dap_python.setup("uv")
+      require("dap-python").setup("uv")
 
       vim.fn.sign_define("DapBreakpoint", {
         text = "",

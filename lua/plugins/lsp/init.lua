@@ -15,7 +15,6 @@ return {
     'neovim/nvim-lspconfig',
     cmd = {'LspInfo', 'LspInstall', 'LspStart'},
     event = {'BufReadPre', 'BufNewFile'},
-    tag = 'v1.8.0', -- v2.0.0 requires Neovim >= v0.10,
     dependencies = {
       {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-nvim-lsp'},

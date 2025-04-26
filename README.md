@@ -2,7 +2,7 @@
 
 ## ⚡️ Requirements
 
-- Neovim >= 0.8.0
+- Neovim >= 0.10.0
 - Git >= 2.19.0
 - A [nerd font](https://github.com/ryanoasis/nerd-fonts) such as [hack](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)

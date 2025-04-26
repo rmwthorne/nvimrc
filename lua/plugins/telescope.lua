@@ -11,6 +11,7 @@ local function picker(method, opts)
 end
 
 local grep_dynamic_opts = function ()
+    -- Capture the word under cursor at execution time
     local current_word = vim.fn.expand('<cword>')
     return { prompt_title = string.format('find "%s"', current_word), search = current_word }
 end
@@ -20,8 +21,8 @@ local grep_cursor_word = picker('grep_string', grep_dynamic_opts)
 local pick_config_files = picker(
     'git_files',
     {
-        cwd = '~/.config/nvim',
-        prompt_title = 'config files',
+        cwd = vim.fn.expand('~/.config/nvim'),
+        prompt_title = 'find config files (~/.config/nvim/)',
         show_untracked = true,
     }
 )
