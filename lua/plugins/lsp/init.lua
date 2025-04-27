@@ -60,6 +60,16 @@ return {
           function(server_name)
             require("lspconfig")[server_name].setup {}
           end,
+          pyright = {
+            analysis = {
+              typeCheckingMode = "basic",
+                diagnosticSeverityOverrides = {
+                    reportOptionalMemberAccess = "none",
+                    reportOptionalSubscript = "none",
+                    reportGeneralTypeIssues = "none",
+                },
+            },
+          }
         },
       }
 
