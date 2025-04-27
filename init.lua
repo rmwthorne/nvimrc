@@ -1,4 +1,4 @@
-require("config.lazy")
-require("custom")
+require "config.lazy"
+require "custom"
 
-vim.cmd("colorscheme rose-pine")
+vim.cmd "colorscheme rose-pine"

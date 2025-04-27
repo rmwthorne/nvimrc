@@ -1,11 +1,7 @@
-local ls = require('luasnip')
+local ls = require "luasnip"
 local s = ls.snippet
 local t = ls.text_node
 
-ls.add_snippets(
-    'all',
-    {
-        s('date', { t({ 'Date here' }) }),
-    }
-)
-
+ls.add_snippets("all", {
+  s("date", { t { "Date here" } }),
+})
