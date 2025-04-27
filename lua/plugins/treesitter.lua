@@ -32,7 +32,7 @@ return {
           "lua",
           "luadoc",
           "markdown",
-          "pip requirements",
+          "requirements",
           "python",
           "query",
           "r",
