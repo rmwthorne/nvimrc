@@ -1,6 +1,7 @@
 
 vim.lsp.enable "luals"
 vim.lsp.enable "basedpyright"
+vim.lsp.enable "ts_ls"
 
 vim.lsp.config['*'] = {
   root_markers = { '.git' },
