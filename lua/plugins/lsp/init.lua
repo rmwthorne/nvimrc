@@ -29,4 +29,7 @@ return {
       {'K', vim.lsp.buf.hover, desc = 'Hover'},
     },
   },
+  {
+    'j-hui/fidget.nvim'
+  },
 }
