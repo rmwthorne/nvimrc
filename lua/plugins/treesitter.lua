@@ -25,6 +25,7 @@ return {
           "gitignore",
           "html",
           "htmldjango",
+          "java",
           "javascript",
           "jinja",
           "jsdoc",

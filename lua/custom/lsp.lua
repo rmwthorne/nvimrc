@@ -1,7 +1,9 @@
 
-vim.lsp.enable "luals"
-vim.lsp.enable "basedpyright"
-vim.lsp.enable "ts_ls"
+vim.lsp.enable "luals" -- Lua
+vim.lsp.enable "basedpyright" -- Python
+vim.lsp.enable "ts_ls" -- Javascript/Typescript
+vim.lsp.enable "jdtls" -- Java
+vim.lsp.enable "markdown_oxide" -- Markdown/Obsidian
 
 vim.lsp.config['*'] = {
   root_markers = { '.git' },
