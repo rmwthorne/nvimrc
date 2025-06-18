@@ -14,4 +14,12 @@ M.set_indent = function(filetypes, tabsize)
   })
 end
 
+M.notify_toggled = function(service, is_enabled)
+  if is_enabled then
+    vim.notify("  " .. service .. " ON")
+  else
+    vim.notify(" " .. service .. " OFF")
+  end
+end
+
 return M

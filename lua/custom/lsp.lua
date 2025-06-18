@@ -1,9 +1,11 @@
 
-vim.lsp.enable "luals" -- Lua
-vim.lsp.enable "basedpyright" -- Python
-vim.lsp.enable "ts_ls" -- Javascript/Typescript
-vim.lsp.enable "jdtls" -- Java
-vim.lsp.enable "markdown_oxide" -- Markdown/Obsidian
+vim.lsp.enable({
+  "luals",          -- Lua
+  "basedpyright",   -- Python
+  "ts_ls",          -- Javascript/Typescript
+  "jdtls",          -- Java
+  "markdown_oxide", -- Markdown
+})
 
 vim.lsp.config['*'] = {
   root_markers = { '.git' },
@@ -33,9 +35,11 @@ vim.diagnostic.config {
 
 vim.keymap.set("n", "<leader>td", function ()
   vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+  require("custom.utils").notify_toggled("Diagnostics", vim.diagnostic.is_enabled())
 end, { desc = "Diagnostics" })
 
 vim.keymap.set("n", "<leader>ti", function ()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+  require("custom.utils").notify_toggled("Inlay Hints", vim.lsp.inlay_hint.is_enabled())
 end, { desc = "Inlay hints" })
 

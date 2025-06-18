@@ -11,6 +11,7 @@ vim.opt.cursorline = true
 -- Indentation
 local set_indent = require("custom.utils").set_indent
 set_indent({ "lua", "javascript", "typescript" }, 2)
+set_indent({ "java" }, 4)
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
