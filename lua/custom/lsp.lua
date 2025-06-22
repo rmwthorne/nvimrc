@@ -11,7 +11,18 @@ vim.lsp.config['*'] = {
   root_markers = { '.git' },
 }
 
--- Disagnostics
+-- Keymaps
+--
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(event)
+    local opts = {buffer = event.buf}
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', 'grt', vim.lsp.buf.type_definition, opts)
+    vim.keymap.set('n', 'grd', vim.lsp.buf.declaration, opts)
+  end,
+})
+
+-- Diagnostics
 --
 vim.diagnostic.config {
   virtual_text = true,

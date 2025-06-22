@@ -30,6 +30,7 @@ return {
           "jinja",
           "jsdoc",
           "json",
+          "kotlin",
           "lua",
           "luadoc",
           "markdown",

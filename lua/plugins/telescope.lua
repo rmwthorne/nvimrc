@@ -38,14 +38,26 @@ return {
     config = function()
       require("telescope").setup {}
       pcall(require("telescope").load_extension, "fzf")
+
+      vim.api.nvim_create_user_command("ProjectFiles", function()
+        local ok = pcall(pick_git_files_all)
+        if not ok then
+          vim.notify("Not a git repository — falling back to find_files", vim.log.levels.INFO, {
+            title = "Telescope: git_files",
+          })
+          require("telescope.builtin").find_files({ prompt_title = 'find files (non-git)'})
+        end
+      end, {})
     end,
     keys = {
-      -- Find
-      { "<leader>ff", pick_git_files_all, desc = "find project files" },
+      -- Find files
+      { "<leader>ff", ":ProjectFiles<cr>", desc = "find project files" },
       { "<leader>fa", picker "find_files", desc = "find all files (CWD)" },
       { "<leader>f.", pick_config_files, desc = "find nvimrc config files" },
       { "<leader>fr", picker "oldfiles", desc = "recent files" },
+      -- Search
       { "<leader>fg", picker "live_grep", desc = "live grep" },
+      { "<leader>fd", picker "diagnostics", desc = "find diagnostics" },
       { "<leader>fh", picker "help_tags", desc = "find help docs" },
       { "<leader>fr", picker "lsp_references", desc = "find LSP references" },
       { "<leader>fw", grep_cursor_word, desc = "grep word under cursor" },
