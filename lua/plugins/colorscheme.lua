@@ -13,4 +13,15 @@ return {
     name = "kanagawa",
     lazy = true,
   },
+  {
+    "vague2k/vague.nvim",
+    name = "vague",
+    lazy = true,
+  },
+  {
+    "zenbones-theme/zenbones.nvim",
+    name = "zenbones",
+    dependencies = "rktjmp/lush.nvim",
+    lazy = true,
+  },
 }
